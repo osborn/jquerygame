@@ -1,3 +1,4 @@
+(function() { return "use strict"; })();
 
 function(){
 	// Calling the aniimate Div function
