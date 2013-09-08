@@ -8,22 +8,23 @@
 	var dodgeball = $('#dodgeball');
 
 	$('#button').click(function(){
-		$('.a').show();
+		dodgeball.show();
 		animateDiv();
 	});
 
 	// Computing the scores for every click
 	var sum = 0;
 
-	$('.a').click(function(){
+	dodgeball.click(function(){
 		sum += 100;
 		$('#user').html('Your Score: '+sum);
 	});
 	
 	// This function returns an array of length 2 that contains a random point in my game-area div
 	function makeNewPosition(){
-		var h = $('#game-area').height() - 25;
-		var w = $('#game-area').width() - 25;
+		var game_area = $('#game-area');
+		var h = game_area.height() - 25;
+		var w = game_area.width() - 25;
 
 		var nh = Math.floor(Math.random() * h);
 		var nw = Math.floor(Math.random() * w);
@@ -34,7 +35,7 @@
 	// Creating the animate function to animate the div
 	function animateDiv(){
 		var newq = makeNewPosition();
-		$('.a').animate({ top: newq[0], left: newq[1] }, 1000, function(){
+		dodgeball.animate({ top: newq[0], left: newq[1] }, 1000, function(){
 	  	animateDiv();
 		});
 	}
