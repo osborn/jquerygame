@@ -8,14 +8,14 @@
 	var dodgeball = $('#dodgeball');
 
 	$('#button').click(function(){
-		$('.a').show();
+		dodgeball.show();
 		animateDiv();
 	});
 
 	// Computing the scores for every click
 	var sum = 0;
 
-	$('.a').click(function(){
+	dodgeball.click(function(){
 		sum += 100;
 		$('#user').html('Your Score: '+sum);
 	});
@@ -34,7 +34,7 @@
 	// Creating the animate function to animate the div
 	function animateDiv(){
 		var newq = makeNewPosition();
-		$('.a').animate({ top: newq[0], left: newq[1] }, 1000, function(){
+		dodgeball.animate({ top: newq[0], left: newq[1] }, 1000, function(){
 	  	animateDiv();
 		});
 	}
