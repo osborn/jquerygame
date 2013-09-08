@@ -13,11 +13,15 @@
 	});
 
 	// Computing the scores for every click
+	
 	var sum = 0;
-
 	dodgeball.click(function(){
 		sum += 100;
 		$('#user').html('Your Score: '+sum);
+
+		// this will make the dodgeball flicker
+		setInterval(function(){dodgeball.css('background-color', 'blue');}, 1000);
+		dodgeball.css('background-color', 'red');
 	});
 	
 	// This function returns an array of length 2 that contains a random point in my game-area div
