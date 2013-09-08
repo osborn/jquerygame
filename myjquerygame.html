@@ -2,20 +2,11 @@
 <head>
 	<title>Osborn's Game</title>
 	<script src="jquery-1.9.0.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="gamecss.css">
+	
+	<!--Linking my css and javascript to the html-->
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 	<link href='http://fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
-	<style type="text/css">
-	h1{font-family: 'News Cycle', sans-serif;color: blue;}
-	body{background-color: #e8e8e8}
-	.span12{position:relative;left: 50px;top:20px;}
-	h2{font-family: 'News Cycle', sans-serif;}
-	p{font-family: 'News Cycle', sans-serif;font-size:180%;}
-	.span6{position:relative;top:30px;}
-	#controls{width:350px;}
-	#game-area{border:2px solid;border-radius:25px;height:400px;}
-	div.a {width: 50px;height:50px;background-color:blue;position:relative;display:none}
-	</style>
+	<link rel="stylesheet" type="text/css" href="game.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -71,39 +62,8 @@
 	</div>
 </div>
 </div>
-<script>
-	$(document).ready(function(){
-		$('#button').click(function(){
-			$('.a').show();
-			animateDiv();
-		});
 
-		var sum = 0;
-		$('.a').click(function(){
-			sum = sum + 100;
-			$('#user').html('Your Score: '+sum);
-		});
-	});
-
-	function makeNewPosition(){
-		var h = $('#game-area').height();
-		var w = $('#game-area').width();
-
-		var nh = Math.floor(Math.random() * h);
-    	var nw = Math.floor(Math.random() * w);
-
-    	return [nh, nw];
-	}
-
-	function animateDiv(){
-		var newq = makeNewPosition();
-    	$('.a').animate({ top: newq[0], left: newq[1] }, 1000, function(){
-      	animateDiv();        
-    	});
-	}
-</script>
-
-
+<script type="text/javascript" src="game.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
 
 </body>
