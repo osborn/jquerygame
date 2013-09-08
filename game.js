@@ -16,8 +16,8 @@ $(document).ready(function(){
 
 	// This function returns an array of length 2 that contains a random point in my game-area div
 	function makeNewPosition(){
-		var h = $('#game-area').height();
-		var w = $('#game-area').width();
+		var h = $('#game-area').height() - 25;
+		var w = $('#game-area').width() - 25;
 
 		var nh = Math.floor(Math.random() * h);
     	var nw = Math.floor(Math.random() * w);
