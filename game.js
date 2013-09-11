@@ -16,6 +16,7 @@
 		gameAreaWidth  	= gameArea.width(),
 		playing			= false,
 		gameOver 		= false,
+		gameTime		= 120, // 120 seconds <==> 2 minutes
 		timerDisplay = $('#timer'),
 		timer, colors = [
 			'#FF0000', '#0000FF', '#FF0066', '#00CC00', '#800000', '#FF9900', '#660066'
@@ -56,7 +57,7 @@
 
 	// New game session
 	function newGame() {
-		timer = new Countdown(120, timerDisplay);
+		timer = new Countdown(gameTime, timerDisplay);
 		timer.fire();
 		playing = true;
 		toggleButtons();
