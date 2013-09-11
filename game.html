@@ -17,13 +17,13 @@
 				</div>
 				<div class="game-stats">
 					<div class="score-holder stat">
-						<span id="current-score-label" class="stat-label">Your Score:</span><span id="current-score" class="value"> </span>
+						<span id="current-score-label" class="stat-label">Your Score: </span><span id="current-score" class="value"> 0</span>
 					</div>
 					<div class="high-score-holder stat">
-						<span id="high-score-label" class="stat-label">High Score:</span><span id="high-score" class="value"> </span>
+						<span id="high-score-label" class="stat-label">High Score:</span><span id="high-score" class="value"> 0</span>
 					</div>
 					<div class="timer-holder stat">
-						<span id="timer-label" class="stat-label">Timer: </span><span id="timer" class="value"> </span>
+						<span id="timer-label" class="stat-label"></span><span id="timer" class="value"> Timer: 0:15</span>
 					</div>
 				</div>
 			</div>
@@ -35,11 +35,12 @@
 					<span class="how-to">You play the game by clicking the moving ball, as many times as you can  within 1 minute.</span>
 					<div class="buttons">
 						<button class="btn btn-primary play button">Start Playing</button>
-						<button class="btn btn-warning pause button">Pause Game</button>
+						<button class="btn btn-warning pause button" disabled="disabled">Pause Game</button>
 					</div>
 				</div>
 				<div class="game-area">
 					<div class="a" id="dodgeball"></div>
+					<div class="summary">Game Over<br />Your scored <span class="score"></span> points.</div>
 				</div>
 			</div>
 		</div>
@@ -48,6 +49,7 @@
 </div>
 
 <script src="jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="timer.js"></script>
 <script type="text/javascript" src="game.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
 
