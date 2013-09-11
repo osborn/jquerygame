@@ -3,20 +3,34 @@
 
 
 ( function ($) {
+	console.log('ready');
 	// Calling the aniimate Div function
 
 	var dodgeball 		= $('#dodgeball'),
-		startButton 	= $('#button'),
-		player 			= $('#user'),
-		gameArea  		= $('#game-area'),
+		startButton 	= $('.play'),
+		score 			= $('#current-score'),
+		gameArea  		= $('.game-area'),
 		gameAreaHeight 	= gameArea.height(),
-		gameAreaWidth  	= gameArea.width();
+		gameAreaWidth  	= gameArea.width(),
+		playing			= false;
 
+	var togglePlay = function() {
+		if (startButton.attr('disabled')) {
+            startButton.removeAttr('disabled');
+        } else {
+            startButton.attr('disabled', 'disabled');
+        }
+	}
 
-
-	startButton.click(function(){
-		dodgeball.show();
-		animateDiv();
+	startButton.click(function() {
+		if (!playing) {
+			playing = true;
+			togglePlay();
+			dodgeball.show();
+			animateDiv();
+		} else {
+			console.log('already playing');
+		}
 	});
 
 	// Computing the scores for every click
@@ -24,13 +38,13 @@
 
 	dodgeball.click(function() {
 		sum += 100;
-		player.html('Your Score: ' + sum);
+		score.html('Your Score: ' + sum);
 	});
 	
 	// This function returns an array of length 2 that contains a random point in my game-area div
 	function makeNewPosition() {
-		var h = gameAreaHeight - 25;
-		var w = gameAreaWidth  - 25;
+		var h = gameAreaHeight - 50;
+		var w = gameAreaWidth  - 50;
 
 		var nh = Math.floor(Math.random() * h);
 		var nw = Math.floor(Math.random() * w);
@@ -41,8 +55,8 @@
 	// Creating the animate function to animate the div
 	function animateDiv(){
 		var newq = makeNewPosition();
-		dodgeball.animate({ top: newq[0], left: newq[1] }, 1000, function(){
-	  	animateDiv();
+        dodgeball.animate({ top: newq[0], left: newq[1] }, 1000, function(){
+	  		animateDiv();
 		});
 	}
 
