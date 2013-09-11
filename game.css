@@ -1,51 +1,121 @@
-body{
-	background-color: #e8e8e8
+.container-fluid {
+	padding: 0;
 }
-
-h1{
-	font-family: 'News Cycle', sans-serif;
-	color: blue;
+.game-wrapper {
+	border: 0px solid #eee;
+    width: 100%;
+    margin: 6em auto;
 }
-
-.span12 {
-	position: relative;
-	left: 50px;
-	top:20px;
+.game-wrapper .game-header {
+	border-bottom: 1px solid #f5f5f5;
+    padding-top: 0.4em;
+    padding-bottom: 0.8em;;
 }
-
-h2{
-	font-family: 'News Cycle', sans-serif;
+.game-header .wrapper {
+    border: 0px solid #0f0;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    min-height: 2.1em;
 }
-
-p {
-	font-family: 'News Cycle', sans-serif;
-	font-size:180%;
+.game-header .wrapper > div {
+    display: inline-block;
 }
-
-.span6 {
-	position: relative;
-	top: 30px;
+.game-header .branding {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5em;
+    color: #0049CC;
+    border: 0px solid #0f0;
+    width: 40%;
+    line-height: 1.4em;
+    font-weight: bold;
 }
-
-#controls {
-	width:350px;
+.game-header .game-stats {
+    position: absolute;
+    right: 0;
+    top: 0.3em;;
+    border: 0px solid #f00;
+    width: 60%;
+    text-align: right;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 1.5em;
 }
-
-#game-area {
-	border: 2px solid;
-	border-radius: 25px;
-	height:400px;
+.game-stats .stat {
+    border: 1px solid #eee;
+    display: inline-block;
+    width: 28%;
+    padding: 0.3em 0.6em 0.5em 0.3em;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 1px rgba(225,225,225,0.6);
+    -moz-box-shadow: 0px 0px 1px rgba(225,225,225,0.6);
+    box-shadow: 0px 0px 1px rgba(225,225,225,0.6);
 }
-
-div.a {
-	width: 50px;
-	height: 50px;
-	background-color: blue;
-	position: relative;
-	display:none
+.game-stats .stat .stat-label {
+    color: #999;
+    position: relative;
+    right: 0.1em;
 }
-
-
+.game-stats .timer-holder {
+    width: 23%;
+}
+.game-stats #timer {
+    color: #F00;
+}
+.game-wrapper .game-body {
+    border-bottom: 1px solid #eee;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+.game-body .wrapper {
+    width: 70%;
+    margin: 0 auto;
+    border: 0px solid #bbb;
+    position: relative;
+    min-height: 25.1em;
+}
+.game-body .wrapper > div {
+    float: left;
+}
+.game-body .controls {
+    width: 33%;
+    border: 0px solid #bbb;
+    padding: 1em;
+    font-family: 'News Cycle', sans-serif;
+}
+.game-body .controls .greeting {
+    font-size: 3em;
+}
+.game-body .controls .how-to {
+    font-size: 1.6em;
+    line-height: 1.25em;
+    display: block;
+}
+.controls .buttons {
+    margin-top: 1em;
+}
+.controls .buttons .button {
+    font-family: courier;
+    font-weight: bold;
+}
+.game-body .game-area {
+    width: 62.8%;
+    height: 25em;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    margin-left: 0.5em;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 1px rgba(225,225,225,0.6);
+    -moz-box-shadow: 0px 0px 1px rgba(225,225,225,0.6);
+    box-shadow: 0px 0px 6px rgba(225,225,225,0.6);
+}
+#dodgeball {
+    background-color: #00f;
+    width: 3em;
+    height: 3em;
+    border-radius: 1.5em;
+    display: none;
+    position: relative;
+}
 #dodgeball:active {
-	background: #ff0000;
+    background-color: #f00;
 }

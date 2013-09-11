@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>MEST DodgeBall</title>
+	
+	<!--Linking my css and javascript to the html-->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link href='http://fonts.googleapis.com/css?family=News+Cycle|Faster+One|Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="game2.css">
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row-fluid game-wrapper">
+		<div class="game-header">
+			<div class="wrapper">
+				<div class="branding">
+					MEST DodgeBall
+				</div>
+				<div class="game-stats">
+					<div class="score-holder stat">
+						<span id="current-score-label" class="stat-label">Your Score:</span><span id="current-score" class="value"> </span>
+					</div>
+					<div class="high-score-holder stat">
+						<span id="high-score-label" class="stat-label">High Score:</span><span id="high-score" class="value"> </span>
+					</div>
+					<div class="timer-holder stat">
+						<span id="timer-label" class="stat-label">Timer: </span><span id="timer" class="value"> </span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="game-body">
+			<div class="wrapper">
+				<div class="controls">
+					<h1 class="greeting">Welcome.</h1>
+					<span class="how-to">You play the game by clicking the moving ball, as many times as you can  within 1 minute.</span>
+					<div class="buttons">
+						<button class="btn btn-primary play button">Start Playing</button>
+						<button class="btn btn-warning pause button">Pause Game</button>
+					</div>
+				</div>
+				<div class="game-area">
+					<div class="a" id="dodgeball"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<script src="jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="game.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+
+</body>
+</html>
