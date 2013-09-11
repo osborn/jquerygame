@@ -56,7 +56,7 @@
 
 	// New game session
 	function newGame() {
-		timer = new Countdown(5, timerDisplay);
+		timer = new Countdown(120, timerDisplay);
 		timer.fire();
 		playing = true;
 		toggleButtons();
@@ -153,7 +153,7 @@
 	// Creating the animate function to animate the div
 	function animateDiv(){
 		var newq = makeNewPosition();
-        dodgeball.animate({ top: newq[0], left: newq[1] }, 4000, function(){
+        dodgeball.animate({ top: newq[0], left: newq[1] }, 1000, function(){
         	if (timer.active) {
         		if (playing) {
         			animateDiv();
