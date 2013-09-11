@@ -3,7 +3,6 @@
 
 
 ( function ($) {
-	
 	// Prefetch Dom elements & init
 	var dodgeball 		= $('#dodgeball'),
 		startButton 	= $('.play'),
@@ -131,8 +130,7 @@
 	pauseButton.click(function() {
 		pauseGame(); // obviously
 	});
-
-	// Computing the scores for every click
+		
 	var sum = 0;
 
 	dodgeball.click(function() {
@@ -167,5 +165,4 @@
         	}
 		});
 	}
-
 } )(jQuery);
