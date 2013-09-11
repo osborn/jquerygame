@@ -22,6 +22,9 @@
 			'#FF0000', '#0000FF', '#FF0066', '#00CC00', '#800000', '#FF9900', '#660066'
 		];
 
+		// Populate the timer box with the game running time
+		new Countdown(gameTime, $('#timer')).render();
+
 	// Disables/Enables a button
 	var toggleButton = function(button) {
 		if (button.attr('disabled')) {
