@@ -131,7 +131,7 @@
     background-color: #00f;
     width: 3em;
     height: 3em;
-    border-radius: 1.5em;
+    /*border-radius: 1.5em;*/
     display: none;
     position: relative;
 }
