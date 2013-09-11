@@ -49,6 +49,7 @@
     -webkit-box-shadow: 0px 0px 1px rgba(225,225,225,0.6);
     -moz-box-shadow: 0px 0px 1px rgba(225,225,225,0.6);
     box-shadow: 0px 0px 1px rgba(225,225,225,0.6);
+    text-align: center;
 }
 .game-stats .stat .stat-label {
     color: #999;
@@ -60,6 +61,9 @@
 }
 .game-stats #timer {
     color: #F00;
+}
+.game-stats #current-score, .game-stats #high-score {
+    color: #0088cc;
 }
 .game-wrapper .game-body {
     border-bottom: 1px solid #eee;
@@ -104,9 +108,24 @@
     border-radius: 6px;
     margin-left: 0.5em;
     position: relative;
-    -webkit-box-shadow: 0px 0px 1px rgba(225,225,225,0.6);
-    -moz-box-shadow: 0px 0px 1px rgba(225,225,225,0.6);
-    box-shadow: 0px 0px 6px rgba(225,225,225,0.6);
+    -webkit-box-shadow: 0px 0px 1px rgba(190,190,190,0.6);
+    -moz-box-shadow: 0px 0px 1px rgba(190,190,190,0.6);
+    box-shadow: 0px 0px 6px rgba(190,190,190,0.6);
+}
+.game-body .game-area .summary {
+    margin-top: 4em;
+    font-size: 2.3em;
+    line-height: 1.1em;
+    font-family: 'Raleway', sans-serif;
+    display: none;
+    text-align: center;
+    color: #000;
+}
+.game-body .game-area .summary .score {
+    color: #00f;
+}
+.game-over {
+	background-color: #ddd;
 }
 #dodgeball {
     background-color: #00f;
@@ -115,7 +134,4 @@
     border-radius: 1.5em;
     display: none;
     position: relative;
-}
-#dodgeball:active {
-    background-color: #f00;
 }
