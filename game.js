@@ -53,6 +53,7 @@
 		toggleButtons();
 		gameArea.addClass('game-over');
 		summaryScore.html(sum);
+		sum = 0; // Reset score for a new game
 		gameSummary.show();
 		dodgeball.hide();
 	}
@@ -62,6 +63,7 @@
 		timer = new Countdown(gameTime, timerDisplay);
 		timer.fire();
 		playing = true;
+		score.html(sum); // Update the score label
 		toggleButtons();
 		dodgeball.show();
 		animateDiv();
