@@ -53,6 +53,8 @@
 		toggleButtons();
 		gameArea.addClass('game-over');
 		summaryScore.html(sum);
+		sum = 0; // Reset score for a new game
+		score.html(sum); // Update the score label
 		gameSummary.show();
 		dodgeball.hide();
 	}
